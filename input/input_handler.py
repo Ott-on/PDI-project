@@ -18,8 +18,8 @@ def mouse_callback(event, x, y, flags, param):
 
     if event == cv2.EVENT_LBUTTONDOWN:
         drawing = True
-        draw_brush(img, grid_x, grid_y, current_color, size=1)
+        draw_brush(img, grid_x, grid_y, current_color, size=param["brush_size"])
     elif event == cv2.EVENT_LBUTTONUP:
         drawing = False
     elif event == cv2.EVENT_MOUSEMOVE and drawing:
-        draw_brush(img, grid_x, grid_y, current_color, size=1)
+        draw_brush(img, grid_x, grid_y, current_color, size=param["brush_size"])
