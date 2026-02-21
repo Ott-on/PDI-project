@@ -29,6 +29,13 @@ def draw_brush(image, x, y, color, size=1):
             
             if 0 <= new_x < width and 0 <= new_y < height:
                  draw_pixel(image, new_x, new_y, color)
+                 
+def clear_image(image, color):
+    height, width = give_height_width(image)
+    
+    for y in range(height):
+        for x in range(width):
+            image[y][x] = color
 
 def give_height_width(image):
     height = len(image)
